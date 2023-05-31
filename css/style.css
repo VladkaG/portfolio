@@ -1,3 +1,109 @@
 body {
-  font-family: "Roboto Serif", serif;
+  font-family: "Crimson Text", serif;
+  color: #2a2a2a;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/background.jpg") 0 0 / cover no-repeat;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav-title {
+  background: #2a2a2a;
+  padding: 4px 15px 0;
+}
+.nav-title a {
+  color: #dfe1e0;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+}
+.nav-title a:hover {
+  color: #dfe1e0;
+}
+.menu-item a {
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+.menu-item {
+  font-size: 32px;
+}
+.menu-item a:hover {
+  color: #b8735b;
+}
+
+.hero-title {
+  position: relative;
+  margin: 150px 0;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+h3 {
+  font-size: 42px;
+  padding-bottom: 30px;
+}
+.hero-title:after {
+  content: "";
+  display: block;
+  width: 105px;
+  height: 2px;
+  background: #2a2a2a;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -50px;
+}
+.btn-download {
+  line-height: 50px;
+  padding: 0 20px;
+  letter-spacing: 2px;
+  border: none;
+  background: rgba(184, 115, 91, 0.6);
+  border-radius: 2px;
+  transition: all 200ms ease-in-out;
+}
+.btn-download a{
+  color: #2a2a2a;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn-download:hover{ 
+  background: transparent;
+  border-top: 2px solid #b8735b;
+  border-bottom: 2px solid #b8735b;
+  letter-spacing: 5px;
+ 
+}
+
+@media (max-width: 768px) {
+  .nav-title {
+    padding: -3px 7px;
+  }
+  .nav-title a {
+    font-size: 30px;
+  }
+  .hero-title {
+    margin: 120px 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 36px;
+    padding-bottom: 30px;
+  }
 }
