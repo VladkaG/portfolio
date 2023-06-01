@@ -7,10 +7,8 @@ body {
   width: 100%;
   min-height: 100vh;
   background: url("/images/background.jpg") 0 0 / cover no-repeat;
-  border: 5px solid #000;
-  border-radius: 5px;
+  box-shadow: 5px 5px 5px #2a2a2a;
 }
-
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -30,6 +28,25 @@ body {
 }
 .nav-title a:hover {
   color: #dfe1e0;
+}
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 2px;
+  background: #b8735b;
+  margin: 0 auto;
+}
+.active {
+  color: #b8735b !important;
+}
+.active::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 2px;
+  background: #b8735b;
+  margin: 0 auto;
 }
 .menu-item a {
   color: #2a2a2a;
@@ -78,20 +95,72 @@ h3 {
   border-radius: 2px;
   transition: all 200ms ease-in-out;
 }
-.btn-download a{
+.btn-download a {
   color: #2a2a2a;
   text-decoration: none;
   text-transform: uppercase;
 }
-.btn-download:hover{ 
+.btn-download:hover {
   background: transparent;
   border-top: 2px solid #b8735b;
   border-bottom: 2px solid #b8735b;
   letter-spacing: 5px;
- 
 }
 
-@media (max-width: 768px) {
+.about {
+  background: #dfe1e0;
+}
+.about-row {
+  margin: 40px auto 10px;
+  display: flex;
+}
+.about-column {
+  flex: 1 1 50%;
+  padding: 5px;
+}
+.about-content {
+  margin: 70px auto 0;
+}
+.about-heading {
+  text-transform: capitalize;
+  font-size: 86px;
+  text-align: start;
+  margin: 20px 0 40px;
+}
+.about-heading span {
+  display: block;
+  margin-left: 90px;
+}
+.about-content p {
+  text-align: start;
+  margin: 0 10px 40px 90px;
+  font-size: 18px;
+}
+.skills span {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    margin: 40px auto 0;
+  }
+  .about-heading {
+    font-size: 64px;
+  }
+  .about-heading span {
+    margin-left: 70px;
+  }
+  .about-content p {
+    margin: 0 10px 20px 70px;
+    font-size: 16px;
+  }
+  .abou-image {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 890px) {
   .nav-title {
     padding: -3px 7px;
   }
@@ -107,5 +176,23 @@ h3 {
   h3 {
     font-size: 36px;
     padding-bottom: 30px;
+  }
+  .about-row {
+    margin: 0 auto 10px;
+    flex-direction: column;
+  }
+  .about-heading {
+    text-transform: capitalize;
+    font-size: 60px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .about-heading span {
+    display: inline;
+    margin: 0;
+  }
+  .about-content p {
+    text-align: center;
+    margin: 0 0 10px;
   }
 }

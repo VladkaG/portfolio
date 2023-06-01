@@ -24,8 +24,8 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="hero">
-      <div class="container content">
+    <div class="about">
+      <div class="container">
         <header>
           <nav class="navbar navbar-expand-md bg-body-transparent">
             <div class="container-fluid">
@@ -49,7 +49,12 @@
               >
                 <ul class="navbar-nav">
                   <li class="nav-item menu-item">
-                    <a class="nav-link" aria-current="page" href="/about.html">about</a>
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/about.html"
+                      >about</a
+                    >
                   </li>
                   <li class="nav-item menu-item">
                     <a class="nav-link" href="#">work</a>
@@ -62,20 +67,33 @@
             </div>
           </nav>
         </header>
-        <div class="hero-title">
-          <h1>Hello, I`m Vladyslava</h1>
-          <h3>junior frontend developer</h3>
+        <div class="about-row">
+          <div class="about-column">
+            <div class="about-content">
+              <h1 class="about-heading">Vladyslava <span>Hryshyna</span></h1>
+              <p>
+                Hi, I`m Vladyslava.
+                <br />
+                I`m junior frontend developer based in Ukraine. I have a
+                bachelor's degree in chemistry from V. N. Karazin Kharkiv
+                National University. I`m studying development on my own, I love
+                it and want to grow up in it.
+              </p>
+              <p class="skills">
+                I am experienced in such technologies as <span>HTML</span>,
+                <span>CSS</span>, <span>GitHub</span>, <span>JavaScript</span>,
+                <span>API</span>, <span>Bootstrap</span>.
+              </p>
+            </div>
+          </div>
+          <div class="about-column">
+            <img
+              src="/images/photo.jpg"
+              alt="vladyslava-photo"
+              class="img-fluid rounded-1 about-image"
+            />
+          </div>
         </div>
-        <button class="btn-download">
-          <span
-            ><a
-              href="https://www.dropbox.com/s/iyzcf12qvxnrmhs/CV%20Hryshyna%20Vladyslava%20eng.pdf?dl=0"
-              target="_blank"
-              >Download resume</a
-            ></span
-          >
-        </button>
-        <div class="hero-image"></div>
       </div>
     </div>
     <script
