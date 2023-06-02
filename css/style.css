@@ -75,6 +75,12 @@ h3 {
   font-size: 42px;
   padding-bottom: 30px;
 }
+h4 {
+  font-size: 40px;
+  text-transform: lowercase;
+  font-weight: 600;
+  margin: 30px 0 10px;
+}
 .hero-title:after {
   content: "";
   display: block;
@@ -86,7 +92,7 @@ h3 {
   bottom: 0;
   margin-left: -50px;
 }
-.btn-download {
+.btn {
   line-height: 50px;
   padding: 0 20px;
   letter-spacing: 2px;
@@ -95,19 +101,21 @@ h3 {
   border-radius: 2px;
   transition: all 200ms ease-in-out;
 }
-.btn-download a {
+.btn a {
   color: #2a2a2a;
   text-decoration: none;
   text-transform: uppercase;
 }
-.btn-download:hover {
+.btn:hover {
   background: transparent;
   border-top: 2px solid #b8735b;
   border-bottom: 2px solid #b8735b;
   letter-spacing: 5px;
 }
 
-.about {
+.about,
+.work,
+.contact {
   background: #dfe1e0;
 }
 .about-row {
@@ -121,13 +129,13 @@ h3 {
 .about-content {
   margin: 70px auto 0;
 }
-.about-heading {
+.heading {
   text-transform: capitalize;
   font-size: 86px;
   text-align: start;
   margin: 20px 0 40px;
 }
-.about-heading span {
+.heading span {
   display: block;
   margin-left: 90px;
 }
@@ -141,22 +149,49 @@ h3 {
   opacity: 0.9;
 }
 
+.work {
+  width: 100%;
+  min-height: 100vh;
+}
+.title {
+  text-transform: lowercase;
+  font-size: 72px;
+  margin: 50px 0;
+  text-align: start;
+}
+.work-row {
+  display: flex;
+}
+.work-column {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+.work-column img {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  -webkit-transform: rotate(0) scale(0.9);
+  transform: rotate(0) scale(0.9);
+}
+.work-column img:hover {
+  -webkit-transform: rotate(10deg) scale(0.8);
+  transform: rotate(10deg) scale(0.8);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 @media (max-width: 1024px) {
   .about-content {
     margin: 40px auto 0;
   }
-  .about-heading {
+  .heading {
     font-size: 64px;
   }
-  .about-heading span {
+  .heading span {
     margin-left: 70px;
   }
   .about-content p {
     margin: 0 10px 20px 70px;
     font-size: 16px;
-  }
-  .abou-image {
-    max-width: 200px;
   }
 }
 
@@ -181,18 +216,25 @@ h3 {
     margin: 0 auto 10px;
     flex-direction: column;
   }
-  .about-heading {
+  .heading {
     text-transform: capitalize;
     font-size: 60px;
     text-align: center;
     margin: 20px 0;
   }
-  .about-heading span {
+  .heading span {
     display: inline;
     margin: 0;
   }
   .about-content p {
     text-align: center;
     margin: 0 0 10px;
+  }
+  .work-row {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 60px;
+    margin: 20px 0;
   }
 }
