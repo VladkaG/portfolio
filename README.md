@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 This website was built to showcase my technical skills, web design skills.
 
